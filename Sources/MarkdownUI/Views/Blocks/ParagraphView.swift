@@ -32,7 +32,9 @@ struct ParagraphView: View {
     } else if #available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *),
       let imageFlow = ImageFlow(content)
     {
-      imageFlow
+        AnyView {
+            imageFlow
+        }
     } else {
       InlineText(content)
     }
